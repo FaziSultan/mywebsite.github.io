@@ -1,0 +1,169 @@
+---
+title: "Tarjimai hol"
+author: "Fazliddin Sultonov"
+output:
+  html_document:
+    toc: yes
+    df_print: paged 
+    toc_float: yes     
+    theme: flatly
+    highlight: tango
+    css: styles.css
+---
+
+```{r setup, include=FALSE}
+# Pakete laden
+library(tidyverse)
+library(dplyr)
+library(ggplot2)
+library(ggthemes)
+```
+
+> "Bilmagan narsalarini qaerdan topishni biladigan kishi o'qimishlidir.
+>
+> --- Georg Simmel
+
+---
+
+<div class="column left">
+
+|<i class="fas fa-user-tie"></i>|Shaxsiy ma'lumotlari||
+|:---------:|:---------|---------:|
+|<i class="fas fa-birthday-cake"></i>|**Tugilgan kun:**|DD.MM.19YY|
+|<i class="fas fa-globe-asia"></i>|**Tugilgan joy:**|Earth|
+|<i class="fas fa-home"></i>|**Turar joyi:**|Somewhere|
+|<i class="fas fa-envelope"></i>|**E-Mail:**|example@mail.com|
+|<i class="fas fa-phone-square"></i>|**Telefon:**|+49(0)1234 5678901|
+</div>
+
+<div class="column right">
+```{r pressure, echo=FALSE, out.width = '50%', out.height = '50%' }
+knitr::include_graphics("img/me.png")
+```
+</div>
+
+---
+
+# <i class="fas fa-briefcase"></i> Ish tajribasi
+
++--------------------+----------------------------+--------------------------------------+
+|                    |                            |                                      |
++:===================+:===========================+:=====================================+
+|***Hozirgacha-***\  |*Lavozim:*\                 |**Ich yurituvche/ Manager**\          |
+|***12/2016***       |*Ish joyi:*\                |Managing MCHJ\                        |
+|                    |*Vazifa va masuliyatlar:*\  |- *Vazifa1*\                          |
+|                    |                            |- *Vazifa2*\                          |
+|                    |                            |- *...*                               |
++--------------------+----------------------------+--------------------------------------+
+|***11/2016***\      |*Lavozim:*\                 |**Oddiy ishchi**\                     |
+|***19/2011***       |*Ish joyi:*\                |Managing MCHJ\                        |
+|                    |*Vazifa va masuliyatlar:*\  |- *Vazifa11*\                         |
+|                    |                            |- *Vazifa22*\                         |
+|                    |                            |- *...*                               |
++--------------------+----------------------------+--------------------------------------+
+
+# <i class="fas fa-award"></i> Malaka/ Qoshimcha talimi
+
++--------------------+----------------------------+--------------------------------------+
+|                    |                            |                                      |
++:===================+:===========================+:=====================================+
+|***03/2013-***\     |*Yonalisch:*\               |**R Language for Everyone**\          |            
+|***04/2014***       |*Kurrs markazi:*\           |XYZ Dasturlasch Markazi\              |
+|                    |*Maqom:*                    |*Kurs tamomlovchi sertifikat*         |
++--------------------+----------------------------+--------------------------------------+
+
+# <i class="fas fa-graduation-cap"></i> Akademik ta'limi
+
++--------------------+----------------------------+--------------------------------------+
+|                    |                            |                                      |
++:===================+:===========================+:=====================================+
+|***01/2011-***\     |*Yonalisch:*\               |**Iqtisodiy raqamlaschtirisch**\      |            
+|***04/2004***       |*Oliygoh:*\                 |TATU\                                 |
+|                    |*Bitiruv darajasi:*         |*Bachelor of Science (B.Sc.)*         |
++--------------------+----------------------------+--------------------------------------+
+
+# <i class="fab fa-leanpub"></i> Maktab ta'limi
+
++--------------------+----------------------------+--------------------------------------+
+|                    |                            |                                      |
++:===================+:===========================+:=====================================+
+|***06/2003-***\     |*Maktab:*\                  |56-O'rta maktab\                      |            
+|***09/1992***       |*Bitiruv darajasi:*         |**O'rta maxsus**                      |
++--------------------+----------------------------+--------------------------------------+
+
+---
+
+# <i class="fas fa-code"></i> IT bilimlari
+
+```{r include=FALSE}
+it <- c("C", "C++", "Java", "CSS", "HTML", "PHP", "MSSQL", "MySql", "Python", "R")
+level <- as.factor(c(20, 25,30, 40, 55, 65, 70, 75, 85, 90 ))
+# Data Frame
+df <- data.frame(it,level)
+#
+# Plot
+ggBar <- ggplot(df) +
+  geom_bar(aes(x=it, y=fct_reorder(level, it)), colour ="black",
+           fill="skyblue1", stat = "identity") +
+  coord_flip() +
+  labs(y = NULL,
+       x = NULL,
+       title = NULL)+
+  theme(legend.position = "none",
+        panel.grid = element_blank(),
+        axis.title = element_blank(),
+        axis.ticks.x = element_blank(),
+        axis.text.x = element_blank(),
+        panel.background = element_blank())
+  #theme_tufte(ticks=FALSE)
+```
+
+```{r echo = FALSE}
+ggBar
+```
+
+---
+
+# <i class="fas fa-comments"></i> Til bilisch
+ 
+```{r include = FALSE }
+language <- c("Uzbek", "Ingliz", "Rus", "Nemis", "Xitoy", "Koreys")
+llevel <- as.factor(c(100, 75, 85, 50, 40, 30 ))
+# DataFrame bilden
+dfl <- data.frame(language,llevel)
+str(dfl)
+dfl
+# Plot
+ggLang <- ggplot(dfl) +
+  geom_bar(aes(x=language, y=llevel), colour ="black",
+           fill = "skyblue" , stat = "identity") +
+  labs(y = NULL,
+       x = NULL,
+       title = NULL)+
+  theme(legend.position = "none",
+        panel.grid = element_blank(),
+        axis.title = element_blank(),
+        axis.ticks.y = element_blank(),
+        axis.text.y = element_blank(),
+        panel.background=element_blank())
+  #theme_tufte(ticks=FALSE)
+
+```
+
+```{r echo = FALSE}
+ggLang
+```
+
+---
+
+# <i class="fas fa-chess"></i> Qiziqischlari
+
+- Telefon
+- Computer o'ynash
+- Kitob o'qish
+- Sport
+- va boshqalar
+
+---
+
+

@@ -1,0 +1,53 @@
+name: "my-website"
+navbar:
+  title: "Fazliddin Sultonov"
+  type: inverse
+  left:
+    - text: "Home"
+      icon: fa-home
+      href: index.html
+    - text: "CV"
+      icon: fas fa-user-tie
+      href: http://cv-sultonov.de/
+    - text: "Examples"
+      icon: fas fa-id-card
+      menu:
+        - icon: fas fa-language
+          text: "cv-uz"
+          href: cv-uz.html
+        - icon: fas fa-language
+          text: "cv-de"
+          href: cv-de.html
+
+  right:
+    - icon: fas fa-thumbs-up
+      menu:
+        - icon: fas fa-comment-dots
+          text: "My Blog (Coming soon;)"
+          href: https://example.com
+        - icon: fab fa-github-square
+          text: "GitHub"
+          href: https://github.com/FaziSultan
+        - icon: fab fa-xing-square
+          text: "Xing"
+          href: https://xing.com/profile/Fazliddin_Sultonov3
+        - icon: fab fa-linkedin
+          text: "Linkedin"
+          href: https://linkedin.com/in/fazliddinsultonov
+        - icon: fab fa-youtube-square
+          text: "YouTube"
+          href: https://youtube.com/channel/UC1vH3m44feh4WzQWQQBMong
+        - icon: fab fa-instagram
+          text: "Instagram"
+          href: https://instagram.com/f_sultonov
+        - icon: fab fa-telegram
+          text: "Telegram"
+          href: https://t.me/f_sultan
+         
+output:
+  html_document:
+    theme: spacelab # https://bootswatch.com/
+    highlight: textmate
+    include:
+      after_body: footer.html
+    css: styles.css
