@@ -1,0 +1,443 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+
+<meta charset="utf-8" />
+<meta name="generator" content="pandoc" />
+<meta http-equiv="X-UA-Compatible" content="IE=EDGE" />
+
+
+
+
+<title>Fazliddin Sultonov</title>
+
+<script src="site_libs/header-attrs-2.7/header-attrs.js"></script>
+<script src="site_libs/jquery-1.11.3/jquery.min.js"></script>
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<link href="site_libs/bootstrap-3.3.5/css/spacelab.min.css" rel="stylesheet" />
+<script src="site_libs/bootstrap-3.3.5/js/bootstrap.min.js"></script>
+<script src="site_libs/bootstrap-3.3.5/shim/html5shiv.min.js"></script>
+<script src="site_libs/bootstrap-3.3.5/shim/respond.min.js"></script>
+<style>h1 {font-size: 34px;}
+       h1.title {font-size: 38px;}
+       h2 {font-size: 30px;}
+       h3 {font-size: 24px;}
+       h4 {font-size: 18px;}
+       h5 {font-size: 16px;}
+       h6 {font-size: 12px;}
+       code {color: inherit; background-color: rgba(0, 0, 0, 0.04);}
+       pre:not([class]) { background-color: white }</style>
+<script src="site_libs/navigation-1.1/tabsets.js"></script>
+<link href="site_libs/highlightjs-9.12.0/textmate.css" rel="stylesheet" />
+<script src="site_libs/highlightjs-9.12.0/highlight.js"></script>
+<link href="site_libs/font-awesome-5.1.0/css/all.css" rel="stylesheet" />
+<link href="site_libs/font-awesome-5.1.0/css/v4-shims.css" rel="stylesheet" />
+
+<style type="text/css">
+  code{white-space: pre-wrap;}
+  span.smallcaps{font-variant: small-caps;}
+  span.underline{text-decoration: underline;}
+  div.column{display: inline-block; vertical-align: top; width: 50%;}
+  div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+  ul.task-list{list-style: none;}
+    </style>
+
+<style type="text/css">code{white-space: pre;}</style>
+<script type="text/javascript">
+if (window.hljs) {
+  hljs.configure({languages: []});
+  hljs.initHighlightingOnLoad();
+  if (document.readyState && document.readyState === "complete") {
+    window.setTimeout(function() { hljs.initHighlighting(); }, 0);
+  }
+}
+</script>
+
+
+
+
+
+<link rel="stylesheet" href="styles.css" type="text/css" />
+
+
+
+<style type = "text/css">
+.main-container {
+  max-width: 940px;
+  margin-left: auto;
+  margin-right: auto;
+}
+img {
+  max-width:100%;
+}
+.tabbed-pane {
+  padding-top: 12px;
+}
+.html-widget {
+  margin-bottom: 20px;
+}
+button.code-folding-btn:focus {
+  outline: none;
+}
+summary {
+  display: list-item;
+}
+pre code {
+  padding: 0;
+}
+</style>
+
+
+<style type="text/css">
+.dropdown-submenu {
+  position: relative;
+}
+.dropdown-submenu>.dropdown-menu {
+  top: 0;
+  left: 100%;
+  margin-top: -6px;
+  margin-left: -1px;
+  border-radius: 0 6px 6px 6px;
+}
+.dropdown-submenu:hover>.dropdown-menu {
+  display: block;
+}
+.dropdown-submenu>a:after {
+  display: block;
+  content: " ";
+  float: right;
+  width: 0;
+  height: 0;
+  border-color: transparent;
+  border-style: solid;
+  border-width: 5px 0 5px 5px;
+  border-left-color: #cccccc;
+  margin-top: 5px;
+  margin-right: -10px;
+}
+.dropdown-submenu:hover>a:after {
+  border-left-color: #adb5bd;
+}
+.dropdown-submenu.pull-left {
+  float: none;
+}
+.dropdown-submenu.pull-left>.dropdown-menu {
+  left: -100%;
+  margin-left: 10px;
+  border-radius: 6px 0 6px 6px;
+}
+</style>
+
+<script type="text/javascript">
+// manage active state of menu based on current page
+$(document).ready(function () {
+  // active menu anchor
+  href = window.location.pathname
+  href = href.substr(href.lastIndexOf('/') + 1)
+  if (href === "")
+    href = "index.html";
+  var menuAnchor = $('a[href="' + href + '"]');
+
+  // mark it active
+  menuAnchor.tab('show');
+
+  // if it's got a parent navbar menu mark it active as well
+  menuAnchor.closest('li.dropdown').addClass('active');
+
+  // Navbar adjustments
+  var navHeight = $(".navbar").first().height() + 15;
+  var style = document.createElement('style');
+  var pt = "padding-top: " + navHeight + "px; ";
+  var mt = "margin-top: -" + navHeight + "px; ";
+  var css = "";
+  // offset scroll position for anchor links (for fixed navbar)
+  for (var i = 1; i <= 6; i++) {
+    css += ".section h" + i + "{ " + pt + mt + "}\n";
+  }
+  style.innerHTML = "body {" + pt + "padding-bottom: 40px; }\n" + css;
+  document.head.appendChild(style);
+});
+</script>
+
+<!-- tabsets -->
+
+<style type="text/css">
+.tabset-dropdown > .nav-tabs {
+  display: inline-table;
+  max-height: 500px;
+  min-height: 44px;
+  overflow-y: auto;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+}
+
+.tabset-dropdown > .nav-tabs > li.active:before {
+  content: "";
+  font-family: 'Glyphicons Halflings';
+  display: inline-block;
+  padding: 10px;
+  border-right: 1px solid #ddd;
+}
+
+.tabset-dropdown > .nav-tabs.nav-tabs-open > li.active:before {
+  content: "&#xe258;";
+  border: none;
+}
+
+.tabset-dropdown > .nav-tabs.nav-tabs-open:before {
+  content: "";
+  font-family: 'Glyphicons Halflings';
+  display: inline-block;
+  padding: 10px;
+  border-right: 1px solid #ddd;
+}
+
+.tabset-dropdown > .nav-tabs > li.active {
+  display: block;
+}
+
+.tabset-dropdown > .nav-tabs > li > a,
+.tabset-dropdown > .nav-tabs > li > a:focus,
+.tabset-dropdown > .nav-tabs > li > a:hover {
+  border: none;
+  display: inline-block;
+  border-radius: 4px;
+  background-color: transparent;
+}
+
+.tabset-dropdown > .nav-tabs.nav-tabs-open > li {
+  display: block;
+  float: none;
+}
+
+.tabset-dropdown > .nav-tabs > li {
+  display: none;
+}
+</style>
+
+<!-- code folding -->
+
+
+
+
+</head>
+
+<body>
+
+
+<div class="container-fluid main-container">
+
+
+
+
+<div class="navbar navbar-inverse  navbar-fixed-top" role="navigation">
+  <div class="container">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="index.html">Fazliddin Sultonov</a>
+    </div>
+    <div id="navbar" class="navbar-collapse collapse">
+      <ul class="nav navbar-nav">
+        <li>
+  <a href="index.html">
+    <span class="fas fa-home"></span>
+     
+    Home
+  </a>
+</li>
+<li>
+  <a href="http://cv-sultonov.de/">
+    <span class="fas fa-user-tie"></span>
+     
+    CV
+  </a>
+</li>
+<li class="dropdown">
+  <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
+    <span class="fas fa-id-card"></span>
+     
+    Examples
+     
+    <span class="caret"></span>
+  </a>
+  <ul class="dropdown-menu" role="menu">
+    <li>
+      <a href="cv-uz.html">
+        <span class="fas fa-language"></span>
+         
+        cv-uz
+      </a>
+    </li>
+    <li>
+      <a href="cv-de.html">
+        <span class="fas fa-language"></span>
+         
+        cv-de
+      </a>
+    </li>
+  </ul>
+</li>
+      </ul>
+      <ul class="nav navbar-nav navbar-right">
+        <li class="dropdown">
+  <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
+    <span class="fas fa-thumbs-up"></span>
+     
+     
+    <span class="caret"></span>
+  </a>
+  <ul class="dropdown-menu" role="menu">
+    <li>
+      <a href="https://example.com">
+        <span class="fas fa-comment-dots"></span>
+         
+        My Blog (Coming soon;)
+      </a>
+    </li>
+    <li>
+      <a href="https://github.com/FaziSultan">
+        <span class="fab fa-github-square"></span>
+         
+        GitHub
+      </a>
+    </li>
+    <li>
+      <a href="https://xing.com/profile/Fazliddin_Sultonov3">
+        <span class="fab fa-xing-square"></span>
+         
+        Xing
+      </a>
+    </li>
+    <li>
+      <a href="https://linkedin.com/in/fazliddinsultonov">
+        <span class="fab fa-linkedin"></span>
+         
+        Linkedin
+      </a>
+    </li>
+    <li>
+      <a href="https://youtube.com/channel/UC1vH3m44feh4WzQWQQBMong">
+        <span class="fab fa-youtube-square"></span>
+         
+        YouTube
+      </a>
+    </li>
+    <li>
+      <a href="https://instagram.com/f_sultonov">
+        <span class="fab fa-instagram"></span>
+         
+        Instagram
+      </a>
+    </li>
+    <li>
+      <a href="https://t.me/f_sultan">
+        <span class="fab fa-telegram"></span>
+         
+        Telegram
+      </a>
+    </li>
+  </ul>
+</li>
+      </ul>
+    </div><!--/.nav-collapse -->
+  </div><!--/.container -->
+</div><!--/.navbar -->
+
+<div id="header">
+
+
+
+<h1 class="title toc-ignore"><h1 style="text-align:center;">
+Welcome!
+</h1></h1>
+
+</div>
+
+
+<div align="center">
+<p><img src="img/index.jpg" width="525" height="375"></p>
+</div>
+<p><br> <br></p>
+<details open>
+<summary>
+<img src="img/de.png" width="35" height="33"> Deutsch
+</summary>
+<p>
+Hallo! Mein Name ist Fazliddin Sultonov und hier ist meine einfache statistische Webseite und somit meine virtuelle Persönlichkeit <i class="far fa-smile-beam"></i>. <br> Aus Interesse und Leidenschaft lerne ich gerne neue Sachen, eine davon ist <a href="https://www.r-project.org/about.html">R (Programmiersprache)</a> bzw. <a href="https://www.rstudio.com/products/rstudio/features/">RStudio</a>. <br> <br> Ich kann mich noch erinnern, wie ich damals meinen ersten Lebenslauf mühsam in Microsoft Word erstellt habe. <em>Warum war/ist die Mühe?</em> - denn der Lebenslauf ist das wichtigste Dokument der Bewerbung, ein guter ist die Eintrittskarte zum Vorstellungsgespräch. <br> Man kann den Lebenslauf auf unterschiedliche Art und Waise erstellen und gestalten (von denen, die ich kenne): neben auf klassische Art mit Word, kann man in die Vorlage im Internet die Daten eingeben und dann den gefertigten kaufen/herunterladen, selbst das Paket <code>pagedown</code> in R enthält Lebenslauf Vorlage. Also wie ein alter Sprichwort sagt <em>viele Wege führen nach Rom…</em> <i class="far fa-smile-wink"></i>. <br> <br> Diese Webseite ist mit <a href="https://rmarkdown.rstudio.com/">R Markdown</a><a href="#fn1" class="footnote-ref" id="fnref1"><sup>1</sup></a> gebildet. Auf dieses Paket basierend mit <code>.Rmd</code><em>-Files</em> lässt sich einfache Webseite bilden. <br> Für mehr anspruchvollere Webseiten gibt es das Paket <a href="https://www.rdocumentation.org/packages/blogdown/versions/1.1">blogdown</a><a href="#fn2" class="footnote-ref" id="fnref2"><sup>2</sup></a>. Damit kann eine statische Webseite <em>(z.B. Blogs)</em> basierend auf <strong>R Markdown</strong> und <a href="https://gohugo.io/">Hugo</a> gebildet werden. Mein Lebenslauf <em>(Im Menü CV)</em> ist mit dem Paket <strong>blogdown</strong> und dem <strong>Hugo Theme</strong> <a href="https://themes.gohugo.io/flex-bp-hugo-cv/">Flex-BP-CV</a> von <a href="https://github.com/spech66">Sebastian Pech</a> generiert. Das Beispiel für einen tabellarischen Lebenslauf <em>(Im Menü Examples, auf Deutsch und Usbekisch)</em> basiert nur auf <code>.Rmd</code><em>-File</em>.
+</p>
+</details>
+<details>
+<summary>
+<img src="img/uz.png" width="35" height="33"> O’zbekcha
+</summary>
+<p>
+Assalomu alaykum! Kamina Fazliddin Sultonov va bu mani oddiy statik veb-saytim shuningdek mani virtual shaxsim <i class="far fa-smile-beam"></i>. <br> Qiziqish va ishtiyoqim tufayli yangi narsalarni o’rganishni yaxshi ko’raman, ulardan biri <a href="https://www.r-project.org/about.html">R (Dasturlash tili)</a> ya’ni <a href="https://www.rstudio.com/products/rstudio/features/">RStudio</a>. <br> <br> Microsoft Word-da birinchi rezyumeimni (yani tarjimai hol) tuzishda o’sha paytda man uchun qiyin bo’lganini (jadval qo’y, formatla, …) eslayman. <em>Nimaga bunchalik ahamiyat?</em> - Chunki rezyume ariza hujjatlari ichidagi eng muhimi, yaxshisi esa - bu uzi <strong><em>intervyu</em></strong> ga chipta degani. Rezyumeni turli xil usullarda yaratish va talqin qilish mumkin (man bilgan va eshitganlarimda): klassik usul Word dan tashqari, Internetdagi tayyor shablonga ma’lumotlarni kiritib va keyin sotib/tushirib olish mumkin, hatto R Paketi bo’lgan <code>pagedown</code> da ham tayyor shablonlar mavjud. Xullas, bir maqolda aytilganidek, <em>Rimga olib boradigan yo’llar ko’p…</em> <i class="far fa-smile-wink"></i>. <br> <br> Ushbu veb-sayt <a href="https://rmarkdown.rstudio.com/">R Markdown</a> <em>(1-Izoh pastda)</em> bilan yaratilgan. Ushbu paket asosida <code>.Rmd</code><em>-fayllari</em> bilan oddiy veb-sayt yaratish mumkin. <br> Ko’proq talabchan yoki murakkabroq saytlar uchun R da <a href="https://www.rdocumentation.org/packages/blogdown/versions/1.1">blogdown</a> <em>(2-Izoh pastda)</em> paketi mavjud. Bu statik veb-saytlarni <em>(masalan bloglar)</em> <strong>R Markdown</strong> va <a href="https://gohugo.io/">Hugo</a> asosida yaratish imkonini beradi. Mening rezyumeyim <em>(CV menyuda)</em> ham <strong>blogdown</strong> paketi va <a href="https://github.com/spech66">Sebastian Pech</a> tomonidan yaratilgan <strong>Hugo Shabloni</strong> <a href="https://themes.gohugo.io/flex-bp-hugo-cv/">Flex-BP-CV</a> asosida tuzilgan. Misol tariqasidagi jadval shaklidagi rezyume <em>(Examples menyusida, o’zbek va nemisch talqinda)</em> faqat <code>.Rmd</code><em>-fayliga</em> asoslangan.
+</p>
+</details>
+<div class="footnotes">
+<hr />
+<ol>
+<li id="fn1"><p>For more information about simple R Markdown websites, please read the documentation at <a href="https://bookdown.org/yihui/rmarkdown/rmarkdown-site.html" class="uri">https://bookdown.org/yihui/rmarkdown/rmarkdown-site.html</a>.<a href="#fnref1" class="footnote-back">↩︎</a></p></li>
+<li id="fn2"><p>Please also note that simple R Markdown sites are <em>not</em> based on <strong>blogdown</strong>. They are probably good for websites with only a few Rmd documents. For larger-scale and more sophisticated websites (such as blogs), you may want to use <strong>blogdown</strong> instead: <a href="https://github.com/rstudio/blogdown" class="uri">https://github.com/rstudio/blogdown</a>. <br> <br><a href="#fnref2" class="footnote-back">↩︎</a></p></li>
+</ol>
+</div>
+
+
+<footer>
+	<p>&copy; 2021 Fazliddin Sultonov. 
+	<br>Build with <i class="fab fa-gratipay"></i> & <a href="https://www.rstudio.com/products/rstudio/features/" target="_blank"> RStudio</a> and 
+	hosted on <a href="https://github.com/" target="_blank"> <i class="fab fa-github"></i></a></p>
+</footer>
+
+
+
+</div>
+
+<script>
+
+// add bootstrap table styles to pandoc tables
+function bootstrapStylePandocTables() {
+  $('tr.odd').parent('tbody').parent('table').addClass('table table-condensed');
+}
+$(document).ready(function () {
+  bootstrapStylePandocTables();
+});
+
+
+</script>
+
+<!-- tabsets -->
+
+<script>
+$(document).ready(function () {
+  window.buildTabsets("TOC");
+});
+
+$(document).ready(function () {
+  $('.tabset-dropdown > .nav-tabs > li').click(function () {
+    $(this).parent().toggleClass('nav-tabs-open');
+  });
+});
+</script>
+
+<!-- code folding -->
+
+
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+  (function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    script.src  = "https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML";
+    document.getElementsByTagName("head")[0].appendChild(script);
+  })();
+</script>
+
+</body>
+</html>

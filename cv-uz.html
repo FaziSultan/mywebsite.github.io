@@ -1,0 +1,681 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+
+<meta charset="utf-8" />
+<meta name="generator" content="pandoc" />
+<meta http-equiv="X-UA-Compatible" content="IE=EDGE" />
+
+
+<meta name="author" content="Fazliddin Sultonov" />
+
+
+<title>Tarjimai hol</title>
+
+<script src="site_libs/header-attrs-2.7/header-attrs.js"></script>
+<script src="site_libs/jquery-1.11.3/jquery.min.js"></script>
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<link href="site_libs/bootstrap-3.3.5/css/flatly.min.css" rel="stylesheet" />
+<script src="site_libs/bootstrap-3.3.5/js/bootstrap.min.js"></script>
+<script src="site_libs/bootstrap-3.3.5/shim/html5shiv.min.js"></script>
+<script src="site_libs/bootstrap-3.3.5/shim/respond.min.js"></script>
+<style>h1 {font-size: 34px;}
+       h1.title {font-size: 38px;}
+       h2 {font-size: 30px;}
+       h3 {font-size: 24px;}
+       h4 {font-size: 18px;}
+       h5 {font-size: 16px;}
+       h6 {font-size: 12px;}
+       code {color: inherit; background-color: rgba(0, 0, 0, 0.04);}
+       pre:not([class]) { background-color: white }</style>
+<script src="site_libs/jqueryui-1.11.4/jquery-ui.min.js"></script>
+<link href="site_libs/tocify-1.9.1/jquery.tocify.css" rel="stylesheet" />
+<script src="site_libs/tocify-1.9.1/jquery.tocify.js"></script>
+<script src="site_libs/navigation-1.1/tabsets.js"></script>
+<link href="site_libs/pagedtable-1.1/css/pagedtable.css" rel="stylesheet" />
+<script src="site_libs/pagedtable-1.1/js/pagedtable.js"></script>
+<link href="site_libs/font-awesome-5.1.0/css/all.css" rel="stylesheet" />
+<link href="site_libs/font-awesome-5.1.0/css/v4-shims.css" rel="stylesheet" />
+
+<style type="text/css">
+  code{white-space: pre-wrap;}
+  span.smallcaps{font-variant: small-caps;}
+  span.underline{text-decoration: underline;}
+  div.column{display: inline-block; vertical-align: top; width: 50%;}
+  div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+  ul.task-list{list-style: none;}
+    </style>
+
+
+
+
+
+
+<link rel="stylesheet" href="styles.css" type="text/css" />
+
+
+
+<style type = "text/css">
+.main-container {
+  max-width: 940px;
+  margin-left: auto;
+  margin-right: auto;
+}
+img {
+  max-width:100%;
+}
+.tabbed-pane {
+  padding-top: 12px;
+}
+.html-widget {
+  margin-bottom: 20px;
+}
+button.code-folding-btn:focus {
+  outline: none;
+}
+summary {
+  display: list-item;
+}
+pre code {
+  padding: 0;
+}
+</style>
+
+
+<style type="text/css">
+.dropdown-submenu {
+  position: relative;
+}
+.dropdown-submenu>.dropdown-menu {
+  top: 0;
+  left: 100%;
+  margin-top: -6px;
+  margin-left: -1px;
+  border-radius: 0 6px 6px 6px;
+}
+.dropdown-submenu:hover>.dropdown-menu {
+  display: block;
+}
+.dropdown-submenu>a:after {
+  display: block;
+  content: " ";
+  float: right;
+  width: 0;
+  height: 0;
+  border-color: transparent;
+  border-style: solid;
+  border-width: 5px 0 5px 5px;
+  border-left-color: #cccccc;
+  margin-top: 5px;
+  margin-right: -10px;
+}
+.dropdown-submenu:hover>a:after {
+  border-left-color: #adb5bd;
+}
+.dropdown-submenu.pull-left {
+  float: none;
+}
+.dropdown-submenu.pull-left>.dropdown-menu {
+  left: -100%;
+  margin-left: 10px;
+  border-radius: 6px 0 6px 6px;
+}
+</style>
+
+<script type="text/javascript">
+// manage active state of menu based on current page
+$(document).ready(function () {
+  // active menu anchor
+  href = window.location.pathname
+  href = href.substr(href.lastIndexOf('/') + 1)
+  if (href === "")
+    href = "index.html";
+  var menuAnchor = $('a[href="' + href + '"]');
+
+  // mark it active
+  menuAnchor.tab('show');
+
+  // if it's got a parent navbar menu mark it active as well
+  menuAnchor.closest('li.dropdown').addClass('active');
+
+  // Navbar adjustments
+  var navHeight = $(".navbar").first().height() + 15;
+  var style = document.createElement('style');
+  var pt = "padding-top: " + navHeight + "px; ";
+  var mt = "margin-top: -" + navHeight + "px; ";
+  var css = "";
+  // offset scroll position for anchor links (for fixed navbar)
+  for (var i = 1; i <= 6; i++) {
+    css += ".section h" + i + "{ " + pt + mt + "}\n";
+  }
+  style.innerHTML = "body {" + pt + "padding-bottom: 40px; }\n" + css;
+  document.head.appendChild(style);
+});
+</script>
+
+<!-- tabsets -->
+
+<style type="text/css">
+.tabset-dropdown > .nav-tabs {
+  display: inline-table;
+  max-height: 500px;
+  min-height: 44px;
+  overflow-y: auto;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+}
+
+.tabset-dropdown > .nav-tabs > li.active:before {
+  content: "";
+  font-family: 'Glyphicons Halflings';
+  display: inline-block;
+  padding: 10px;
+  border-right: 1px solid #ddd;
+}
+
+.tabset-dropdown > .nav-tabs.nav-tabs-open > li.active:before {
+  content: "&#xe258;";
+  border: none;
+}
+
+.tabset-dropdown > .nav-tabs.nav-tabs-open:before {
+  content: "";
+  font-family: 'Glyphicons Halflings';
+  display: inline-block;
+  padding: 10px;
+  border-right: 1px solid #ddd;
+}
+
+.tabset-dropdown > .nav-tabs > li.active {
+  display: block;
+}
+
+.tabset-dropdown > .nav-tabs > li > a,
+.tabset-dropdown > .nav-tabs > li > a:focus,
+.tabset-dropdown > .nav-tabs > li > a:hover {
+  border: none;
+  display: inline-block;
+  border-radius: 4px;
+  background-color: transparent;
+}
+
+.tabset-dropdown > .nav-tabs.nav-tabs-open > li {
+  display: block;
+  float: none;
+}
+
+.tabset-dropdown > .nav-tabs > li {
+  display: none;
+}
+</style>
+
+<!-- code folding -->
+
+
+
+<style type="text/css">
+
+#TOC {
+  margin: 25px 0px 20px 0px;
+}
+@media (max-width: 768px) {
+#TOC {
+  position: relative;
+  width: 100%;
+}
+}
+
+@media print {
+.toc-content {
+  /* see https://github.com/w3c/csswg-drafts/issues/4434 */
+  float: right;
+}
+}
+
+.toc-content {
+  padding-left: 30px;
+  padding-right: 40px;
+}
+
+div.main-container {
+  max-width: 1200px;
+}
+
+div.tocify {
+  width: 20%;
+  max-width: 260px;
+  max-height: 85%;
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+  div.tocify {
+    width: 25%;
+  }
+}
+
+@media (max-width: 767px) {
+  div.tocify {
+    width: 100%;
+    max-width: none;
+  }
+}
+
+.tocify ul, .tocify li {
+  line-height: 20px;
+}
+
+.tocify-subheader .tocify-item {
+  font-size: 0.90em;
+}
+
+.tocify .list-group-item {
+  border-radius: 0px;
+}
+
+
+</style>
+
+
+
+</head>
+
+<body>
+
+
+<div class="container-fluid main-container">
+
+
+<!-- setup 3col/9col grid for toc_float and main content  -->
+<div class="row">
+<div class="col-sm-12 col-md-4 col-lg-3">
+<div id="TOC" class="tocify">
+</div>
+</div>
+
+<div class="toc-content col-sm-12 col-md-8 col-lg-9">
+
+
+
+
+<div class="navbar navbar-inverse  navbar-fixed-top" role="navigation">
+  <div class="container">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="index.html">Fazliddin Sultonov</a>
+    </div>
+    <div id="navbar" class="navbar-collapse collapse">
+      <ul class="nav navbar-nav">
+        <li>
+  <a href="index.html">
+    <span class="fas fa-home"></span>
+     
+    Home
+  </a>
+</li>
+<li>
+  <a href="http://cv-sultonov.de/">
+    <span class="fas fa-user-tie"></span>
+     
+    CV
+  </a>
+</li>
+<li class="dropdown">
+  <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
+    <span class="fas fa-id-card"></span>
+     
+    Examples
+     
+    <span class="caret"></span>
+  </a>
+  <ul class="dropdown-menu" role="menu">
+    <li>
+      <a href="cv-uz.html">
+        <span class="fas fa-language"></span>
+         
+        cv-uz
+      </a>
+    </li>
+    <li>
+      <a href="cv-de.html">
+        <span class="fas fa-language"></span>
+         
+        cv-de
+      </a>
+    </li>
+  </ul>
+</li>
+      </ul>
+      <ul class="nav navbar-nav navbar-right">
+        <li class="dropdown">
+  <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
+    <span class="fas fa-thumbs-up"></span>
+     
+     
+    <span class="caret"></span>
+  </a>
+  <ul class="dropdown-menu" role="menu">
+    <li>
+      <a href="https://example.com">
+        <span class="fas fa-comment-dots"></span>
+         
+        My Blog (Coming soon;)
+      </a>
+    </li>
+    <li>
+      <a href="https://github.com/FaziSultan">
+        <span class="fab fa-github-square"></span>
+         
+        GitHub
+      </a>
+    </li>
+    <li>
+      <a href="https://xing.com/profile/Fazliddin_Sultonov3">
+        <span class="fab fa-xing-square"></span>
+         
+        Xing
+      </a>
+    </li>
+    <li>
+      <a href="https://linkedin.com/in/fazliddinsultonov">
+        <span class="fab fa-linkedin"></span>
+         
+        Linkedin
+      </a>
+    </li>
+    <li>
+      <a href="https://youtube.com/channel/UC1vH3m44feh4WzQWQQBMong">
+        <span class="fab fa-youtube-square"></span>
+         
+        YouTube
+      </a>
+    </li>
+    <li>
+      <a href="https://instagram.com/f_sultonov">
+        <span class="fab fa-instagram"></span>
+         
+        Instagram
+      </a>
+    </li>
+    <li>
+      <a href="https://t.me/f_sultan">
+        <span class="fab fa-telegram"></span>
+         
+        Telegram
+      </a>
+    </li>
+  </ul>
+</li>
+      </ul>
+    </div><!--/.nav-collapse -->
+  </div><!--/.container -->
+</div><!--/.navbar -->
+
+<div id="header">
+
+
+
+<h1 class="title toc-ignore">Tarjimai hol</h1>
+<h4 class="author">Fazliddin Sultonov</h4>
+
+</div>
+
+
+<blockquote>
+<p>"Bilmagan narsalarini qaerdan topishni biladigan kishi o’qimishlidir.</p>
+<p>— Georg Simmel</p>
+</blockquote>
+<hr />
+<div class="column left">
+<table>
+<thead>
+<tr class="header">
+<th align="center"><i class="fas fa-user-tie"></i></th>
+<th align="left">Shaxsiy ma’lumotlari</th>
+<th align="right"></th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="center"><i class="fas fa-birthday-cake"></i></td>
+<td align="left"><strong>Tugilgan kun:</strong></td>
+<td align="right">DD.MM.19YY</td>
+</tr>
+<tr class="even">
+<td align="center"><i class="fas fa-globe-asia"></i></td>
+<td align="left"><strong>Tugilgan joy:</strong></td>
+<td align="right">Earth</td>
+</tr>
+<tr class="odd">
+<td align="center"><i class="fas fa-home"></i></td>
+<td align="left"><strong>Turar joyi:</strong></td>
+<td align="right">Somewhere</td>
+</tr>
+<tr class="even">
+<td align="center"><i class="fas fa-envelope"></i></td>
+<td align="left"><strong>E-Mail:</strong></td>
+<td align="right"><a href="mailto:example@mail.com" class="email">example@mail.com</a></td>
+</tr>
+<tr class="odd">
+<td align="center"><i class="fas fa-phone-square"></i></td>
+<td align="left"><strong>Telefon:</strong></td>
+<td align="right">+49(0)1234 5678901</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="column right">
+<p><img src="img/me.png" width="50%" height="50%" /></p>
+</div>
+<hr />
+<div id="ish-tajribasi" class="section level1">
+<h1><i class="fas fa-briefcase"></i> Ish tajribasi</h1>
+<table>
+<colgroup>
+<col width="23%" />
+<col width="32%" />
+<col width="43%" />
+</colgroup>
+<tbody>
+<tr class="odd">
+<td align="left"><strong><em>Hozirgacha-</em></strong><br />
+<strong><em>12/2016</em></strong></td>
+<td align="left"><em>Lavozim:</em><br />
+<em>Ish joyi:</em><br />
+<em>Vazifa va masuliyatlar:</em><br />
+</td>
+<td align="left"><strong>Ich yurituvche/ Manager</strong><br />
+Managing MCHJ<br />
+- <em>Vazifa1</em><br />
+- <em>Vazifa2</em><br />
+- <em>…</em></td>
+</tr>
+<tr class="even">
+<td align="left"><strong><em>11/2016</em></strong><br />
+<strong><em>19/2011</em></strong></td>
+<td align="left"><em>Lavozim:</em><br />
+<em>Ish joyi:</em><br />
+<em>Vazifa va masuliyatlar:</em><br />
+</td>
+<td align="left"><strong>Oddiy ishchi</strong><br />
+Managing MCHJ<br />
+- <em>Vazifa11</em><br />
+- <em>Vazifa22</em><br />
+- <em>…</em></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div id="malaka-qoshimcha-talimi" class="section level1">
+<h1><i class="fas fa-award"></i> Malaka/ Qoshimcha talimi</h1>
+<table>
+<colgroup>
+<col width="23%" />
+<col width="32%" />
+<col width="43%" />
+</colgroup>
+<tbody>
+<tr class="odd">
+<td align="left"><strong><em>03/2013-</em></strong><br />
+<strong><em>04/2014</em></strong></td>
+<td align="left"><em>Yonalisch:</em><br />
+<em>Kurrs markazi:</em><br />
+<em>Maqom:</em></td>
+<td align="left"><strong>R Language for Everyone</strong><br />
+XYZ Dasturlasch Markazi<br />
+<em>Kurs tamomlovchi sertifikat</em></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div id="akademik-talimi" class="section level1">
+<h1><i class="fas fa-graduation-cap"></i> Akademik ta’limi</h1>
+<table>
+<colgroup>
+<col width="23%" />
+<col width="32%" />
+<col width="43%" />
+</colgroup>
+<tbody>
+<tr class="odd">
+<td align="left"><strong><em>01/2011-</em></strong><br />
+<strong><em>04/2004</em></strong></td>
+<td align="left"><em>Yonalisch:</em><br />
+<em>Oliygoh:</em><br />
+<em>Bitiruv darajasi:</em></td>
+<td align="left"><strong>Iqtisodiy raqamlaschtirisch</strong><br />
+TATU<br />
+<em>Bachelor of Science (B.Sc.)</em></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div id="maktab-talimi" class="section level1">
+<h1><i class="fab fa-leanpub"></i> Maktab ta’limi</h1>
+<table>
+<colgroup>
+<col width="23%" />
+<col width="32%" />
+<col width="43%" />
+</colgroup>
+<tbody>
+<tr class="odd">
+<td align="left"><strong><em>06/2003-</em></strong><br />
+<strong><em>09/1992</em></strong></td>
+<td align="left"><em>Maktab:</em><br />
+<em>Bitiruv darajasi:</em></td>
+<td align="left">56-O’rta maktab<br />
+<strong>O’rta maxsus</strong></td>
+</tr>
+</tbody>
+</table>
+<hr />
+</div>
+<div id="it-bilimlari" class="section level1">
+<h1><i class="fas fa-code"></i> IT bilimlari</h1>
+<p><img src="cv-uz_files/figure-html/unnamed-chunk-2-1.png" width="672" /></p>
+<hr />
+</div>
+<div id="til-bilisch" class="section level1">
+<h1><i class="fas fa-comments"></i> Til bilisch</h1>
+<p><img src="cv-uz_files/figure-html/unnamed-chunk-4-1.png" width="672" /></p>
+<hr />
+</div>
+<div id="qiziqischlari" class="section level1">
+<h1><i class="fas fa-chess"></i> Qiziqischlari</h1>
+<ul>
+<li>Telefon</li>
+<li>Computer o’ynash</li>
+<li>Kitob o’qish</li>
+<li>Sport</li>
+<li>va boshqalar</li>
+</ul>
+<hr />
+</div>
+
+
+<footer>
+	<p>&copy; 2021 Fazliddin Sultonov. 
+	<br>Build with <i class="fab fa-gratipay"></i> & <a href="https://www.rstudio.com/products/rstudio/features/" target="_blank"> RStudio</a> and 
+	hosted on <a href="https://github.com/" target="_blank"> <i class="fab fa-github"></i></a></p>
+</footer>
+
+
+</div>
+</div>
+
+</div>
+
+<script>
+
+// add bootstrap table styles to pandoc tables
+function bootstrapStylePandocTables() {
+  $('tr.odd').parent('tbody').parent('table').addClass('table table-condensed');
+}
+$(document).ready(function () {
+  bootstrapStylePandocTables();
+});
+
+
+</script>
+
+<!-- tabsets -->
+
+<script>
+$(document).ready(function () {
+  window.buildTabsets("TOC");
+});
+
+$(document).ready(function () {
+  $('.tabset-dropdown > .nav-tabs > li').click(function () {
+    $(this).parent().toggleClass('nav-tabs-open');
+  });
+});
+</script>
+
+<!-- code folding -->
+
+<script>
+$(document).ready(function ()  {
+
+    // move toc-ignore selectors from section div to header
+    $('div.section.toc-ignore')
+        .removeClass('toc-ignore')
+        .children('h1,h2,h3,h4,h5').addClass('toc-ignore');
+
+    // establish options
+    var options = {
+      selectors: "h1,h2,h3",
+      theme: "bootstrap3",
+      context: '.toc-content',
+      hashGenerator: function (text) {
+        return text.replace(/[.\\/?&!#<>]/g, '').replace(/\s/g, '_');
+      },
+      ignoreSelector: ".toc-ignore",
+      scrollTo: 0
+    };
+    options.showAndHide = true;
+    options.smoothScroll = true;
+
+    // tocify
+    var toc = $("#TOC").tocify(options).data("toc-tocify");
+});
+</script>
+
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+  (function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    script.src  = "https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML";
+    document.getElementsByTagName("head")[0].appendChild(script);
+  })();
+</script>
+
+</body>
+</html>
